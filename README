@@ -1,0 +1,5 @@
+Flask-Filekit
+
+Handles processing of uploaded files. It uses Flask-Uploads to manage files 
+but acts as a layer on top to handle declarations and processing of descendant 
+files such as thumbnails. Resize processor included.
