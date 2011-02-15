@@ -11,7 +11,7 @@ This module makes it easier to declare files and their derivative versions
 
 import os.path
 from werkzeug import FileStorage
-from flaskext.uploads import UploadSet
+from flaskext.uploads import UploadSet, DEFAULTS
 
 
 class DeclarativeFieldsMetaclass(type):
