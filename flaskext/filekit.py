@@ -11,7 +11,7 @@ This module makes it easier to declare files and their derivative versions
 
 import os.path
 from werkzeug import FileStorage
-from flaskext.uploads import UploadSet, DEFAULTS
+from flaskext.uploads import UploadSet
 
 
 class DeclarativeFieldsMetaclass(type):
@@ -59,8 +59,7 @@ class Field(object):
 class FileKit(object):
     __metaclass__ = DeclarativeFieldsMetaclass
     
-    EXTENSIONS = DEFAULTS
-    uset = UploadSet('files', EXTENSIONS) # Overwrite
+    uset = UploadSet('files', DEFAULTS) # Overwrite
     
     def __init__(self, filename):
         self.filename = filename
@@ -111,6 +110,10 @@ ImageFile.MAXBLOCK = 1000000 # default is 64k
 import tempfile
 
 class Resize(Processor):
+    """
+    Adopted from django-imagekit.
+    
+    """
     
     format = 'JPEG'
     

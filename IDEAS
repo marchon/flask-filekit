@@ -1,0 +1,8 @@
+Add Flask-Script commands to reprocess all files or specific fields. So if 
+you add or change a field or a processor you can regenerate those files 
+quickly.
+
+Add a callable to generate a random filename. 
+
+Cloud storage of files, filename distribution. Could be solved with signals 
+and overwriting the `url` method.
